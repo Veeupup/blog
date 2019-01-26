@@ -8,7 +8,7 @@ categories:
 ---
 
 ```
-HDFS的学习笔记以及实践记录，全文较长。
+HDFS的学习笔记以及实践记录。
 多学习官网文档。
 ```
 
@@ -103,11 +103,84 @@ http://hadoop.apache.org
 
 # HDFS环境搭建
 
-* Hadoop版本： hadoop-2.6.0-cdh5.7.0  [CDH](https://archive.cloudera.com/cdh5/cdh/5/)
-
-  
+见另文。
 
 # HDFS shell
+
+​	以官网为准，这里只写出常见多用到的命令，与linux平台使用方式类似。
+
+```shell
+Usage: hdfs [SHELL_OPTIONS] COMMAND [GENERIC_OPTIONS] [COMMAND_OPTIONS]
+```
+
+常见命令的使用：
+
+* ls
+* mkdir
+* put
+* get
+* rm
+
+```shell
+eg：上传文件并查看
+hadoop fs -put hello /	#上传
+hadoop fs -ls /			#查看文件目录列表
+hadoop fs -text （或者-cat） /hello.txt 	# 查看文件内容
+
+eg：创建文件夹
+hadoop fs -mkdir /test
+hadoop fs -mkdir -p /test/a/b	#递归创建文件夹
+
+eg：下载文件
+hadoop fs -get	xxx
+```
+
+​	上传的文件可以在浏览器端查看，可以查看每个文件包含的block。
+
 # Java API操作HDFS
+
+见另文。
+
+通过hdfs shell 的方式put文件到hdfs中，才采用默认的副本系数，
+
+如果采用java api方式上传上去，由于在本地没有设置副本系数，所以副本系数为3。
+
 # HDFS文件读写流程
+
+文件读写流程。
+
+## 角色
+
+* Client：发起读写请求
+
+* NameNode：核心，只有一个，管理协调请求
+* DataNodes：数据存储，数量多
+
+## 写文件过程
+
+* 客户端发起写文件请求（一个好的客户端应该不需要制定blocksize块大小和replication factor副本系数）
+  * 客户端将文件拆分成块
+* 询问NameNode ，先处理 first block 第一块的数据， NameNode 读取副本系数，然后根据距离远近返回三个 DataNode 
+* Client  将 first block 第一块的数据写到第一个DataNode上，然后以  pipeline 流水线的方式将同样的数据写到第二三个 DataNode上。
+* 当三个DataNode都写完first block 后，向NameNode发送 已完成的信号。
+* 重复以上操作将其余的block都写完。
+
+## 读文件过程
+
+* 客户端发起请求，请求文件名
+* Namenode响应，并按照块返回一个文件所包含的块以及每个块分布在哪些DataNode上的信息
+* client 读取下载数据
+
 # HDFS优缺点
+
+## 优点
+
+* 数据冗余，硬件容错
+* 适合存储大文件
+* 处理流式的数据访问
+* 可构建在廉价机器上
+
+## 缺点
+
+* 高延迟的数据访问
+* 不适合小文件的存储

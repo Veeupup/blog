@@ -4,5 +4,4 @@ db.json
 *.log
 node_modules/
 public/
-.deploy*/
-themes/next
+.deploy_git/

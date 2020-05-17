@@ -1,10 +1,6 @@
 ---
 title: 分布式计算框架MapReduce
 date: 2019-01-25 15:16:45
-tags:
-- Hadoop
-categories:
-- 大数据
 
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: 搭建Hadoop分布式集群
 date: 2019-02-03 12:44:09
-tags:
-- Hadoop
-categories:
-- 大数据
 ---
 
 ​	本地分布式集群搭建。

@@ -1,10 +1,6 @@
 ---
 title: 'x86,ARM,MIPS区别与辨析'
 date: 2019-01-20 16:34:16
-tags:
-- CPU
-categories:
-- 计算机
 ---
 
 ​	辨析 x86， ARM, MIPS 的一篇短文，参考网络一些资料整理如下。
@@ -30,7 +26,7 @@ categories:
 
 ​	MIPS基于RISC，学院派 CPU ，授权门槛低，用其做 MIPS 的衍生架构。主要用在嵌入式领域，如路由器。最活跃的是中国的龙芯，龙芯的loogisa 是MIPS 的拓展。
 
-# ​区别与联系
+# 区别与联系
 
 * ARM、MIPS性能和 x86差距很大，但是ARM 便宜且功耗低，MIPS 纯计算能力强。
 

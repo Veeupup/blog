@@ -1,10 +1,6 @@
 ---
 title: 搭建Hadoop单节点伪分布式记录
 date: 2019-01-20 16:34:40
-tags:
-- Hadoop
-categories:
-- 大数据
 ---
 
 ​	记录搭建hadoop搭建单节点过程，中间不可避免踩了很多坑，都记录下来。

@@ -1,10 +1,7 @@
 ---
 title: 分布式资源调度YARN
 date: 2019-01-24 18:17:02
-tags:
-- Hadoop
-categories:
-- 大数据
+
 ---
 
 ​	学习笔记记录。

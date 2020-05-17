@@ -1,10 +1,6 @@
 ---
 title: 分布式文件系统HDFS
 date: 2019-01-20 14:10:34
-tags:
-- Hadoop
-categories:
-- 大数据
 ---
 
 ```

@@ -1,10 +1,6 @@
 ---
 title: 初识Hadoop
 date: 2019-01-20 13:24:15
-tags:
-- Hadoop
-categories:
-- 大数据
 
 ---
 

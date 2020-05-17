@@ -1,11 +1,6 @@
 ---
 title: 基于webgl的2D游戏引擎学习和游戏demo
 date: 2018-07-30 02:12:12
-tags:
-- webgl
-- javascript
-categories:
-- 2D游戏开发
 ---
 
 ​	这段时间在NUS，学习了关于计算机视觉的一些基础课程。选定的project是2D videogame，在此记录下关于利用webgl的2D游戏引擎制作过程和遇到的问题。游戏为[Escape](https://veeupup.github.io/Escape)，源码在 [github](https://github.com/Veeupup/Escape)上，下面是对游戏引擎的机制的分析和记录，便于理清思路并以后复习。

@@ -1,10 +1,6 @@
 ---
 title: Hadoop完整项目实现
 date: 2019-01-27 10:27:19
-tags:
-- Hadoop
-categories:
-- 大数据
 ---
 
 ​	学习完Hadoop基础知识之后，学习Hadoop实际应用中的使用情况。

@@ -106,6 +106,22 @@ menu:
 menu_icons:
   enable: true
 
+# 夜间模式
+next_nightmode:
+  enable: true
+  # FontAwesome or ForkAwesome icon in sidebar button.
+  icon: lightbulb-o
+  # Text for sidebar button.
+  text: Night Mode
+  # If true, when you disable Night Mode, Hexo will show warning messages in your console.
+  reminder: false
+  # Debugger for alpha option below.
+  debugger: false
+  # Support experimental prefers-color-scheme media query.
+  # For now if alpha mode enabled, sidebar button will be disabled.
+  # The only way to toggle night mode is changing your device scheme.
+  # Also see: https://caniuse.com/#feat=prefers-color-scheme.
+  alpha: false
 
 # ---------------------------------------------------------------
 # Scheme Settings
